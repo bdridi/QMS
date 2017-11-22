@@ -1,0 +1,51 @@
+<div class="jumbotron text-center">
+	<h1>Queue management System</h1>
+
+	<p>{{ tagline }}</p>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        
+         <div class="col-md-8">
+                <div class="panel panel-default">
+                  <!-- Default panel contents -->
+                  <div class="panel-heading">Queue State</div>
+               <div class="panel-body">
+                   Last Given Token 
+                 <div id="token"></div>
+              </div>
+                  <!-- Table -->
+                  <table class="table">
+                        <tr>
+                            <th>DESK #</th>
+                            <th> TOKEN #</th>
+                            <th> ACTION</th>
+                        </tr>  
+                        <tr ng-repeat="(key,value) in state.sdesks">
+                            <td> {{ key }} </td>
+                            <td> {{ value }}</td>
+                            <td> <button ng-click="next(key)" class="btn btn-default">Next</button></td>
+                        </tr>
+                        
+                  </table>
+                </div>
+          </div>
+          <div class="col-md-4">
+            
+            <button class="btn btn-primary" ng-click="newToken()">
+                NEW TOKEN
+            </button>
+            <img src="http://ut-qms.com/wp-content/uploads/IQP600-40R1.jpg"/>
+          </div>
+        
+    </div>
+   
+     
+   
+    
+                        
+                    
+    
+</div>
